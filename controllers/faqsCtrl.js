@@ -10,4 +10,7 @@ import connection from "../dbConfig.js";
   },
 };
 
+
+
+
 export default faqsCtrl

@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import faqsRouter from './routes/faqsRouter.js';
-
+import projectsRouter from './routes/projectsRouter.js';
 const app = express();
 
 app.use(bodyParser.json());
@@ -17,3 +17,5 @@ app.listen(port, () => {
 
 
 app.use('/api/faqs', faqsRouter);
+
+app.use('/api/projects', projectsRouter);
