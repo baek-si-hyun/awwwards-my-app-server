@@ -10,11 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-const port = 4000;
+const port = 5000;
 app.listen(port, () => {
   console.log("server listening on port", port);
 });
-
 
 app.use('/api/faqs', faqsRouter);
 

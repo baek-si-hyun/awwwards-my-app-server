@@ -1,8 +1,7 @@
-import fs from 'fs'
-import mysql from 'mysql'
+import fs from 'fs';
+import mysql from 'mysql';
 
-
-const data = fs.readFileSync('./database.json', 'utf8');
+const data = fs.readFileSync('./database.json');
 const conf = JSON.parse(data);
 
 const connection = mysql.createConnection({
@@ -13,6 +12,6 @@ const connection = mysql.createConnection({
   database: conf.database,
 });
 
-connection.connect()
+connection.connect();
 
-export default connection
+export default connection;

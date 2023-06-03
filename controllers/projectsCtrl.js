@@ -18,8 +18,8 @@ export const projectsCtrl = {
         delete row.projects_prev_img2;
         delete row.projects_prev_img3;
         delete row.projects_prev_img4;
-        row.projects_font = JSON.parse(row.projects_font);
-        row.projects_color = JSON.parse(row.projects_color);
+        row.projects_fonts = JSON.parse(row.projects_fonts);
+        row.projects_colors = JSON.parse(row.projects_colors);
       });
 
       res.send(rows);
