@@ -10,6 +10,7 @@ const connection = mysql.createConnection({
   password: conf.password,
   port: conf.port,
   database: conf.database,
+  connectionLimit: 20,
 });
 
 connection.connect();
