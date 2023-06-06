@@ -1,6 +1,6 @@
-import connection from "../dbConfig.js";
+const connection = require("../dbConfig.js");
 
- const faqsCtrl = {
+const faqsCtrl = {
   getFaqs: async (req, res) => {
     connection.query("select * from faqs_table", (error, rows) => {
       if (error) throw error;
@@ -9,7 +9,4 @@ import connection from "../dbConfig.js";
   },
 };
 
-
-
-
-export default faqsCtrl
+module.exports = faqsCtrl;

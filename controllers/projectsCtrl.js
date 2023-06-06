@@ -1,6 +1,6 @@
-import connection from '../dbConfig.js';
+const connection = require('../dbConfig.js');
 
-export const projectsCtrl = {
+const projectsCtrl = {
   getProjects: async (req, res) => {
     connection.query('select * from projects_table', (error, rows) => {
       if (error) throw error;
@@ -27,4 +27,4 @@ export const projectsCtrl = {
   },
 };
 
-export default projectsCtrl;
+module.exports = projectsCtrl;

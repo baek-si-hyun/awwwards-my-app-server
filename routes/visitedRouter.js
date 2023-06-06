@@ -1,10 +1,10 @@
-import express from 'express';
-import visitedCtrl from '../controllers/visitedCtrl.js'
+const express = require('express');
+const visitedCtrl = require('../controllers/visitedCtrl.js');
 
 const router = express.Router();
 
 router.route('/')
     .get(visitedCtrl.getVisited)
-    .post(visitedCtrl.setVisited)
+    .post(visitedCtrl.setVisited);
 
-export default router
+module.exports = router;

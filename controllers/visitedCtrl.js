@@ -1,8 +1,8 @@
-import connection from "../dbConfig.js";
+const connection = require('../dbConfig.js');
 
-const updateDB = async (totay, total) => {
+const updateDB = async (today, total) => {
   connection.query(
-    `update visited_table set ${totay} = ${totay} + 1, ${total} = ${total} + 1`,
+    `update visited_table set ${today} = ${today} + 1, ${total} = ${total} + 1`,
     (error, rows) => {
       if (error) throw error;
       console.log(error);
@@ -10,7 +10,7 @@ const updateDB = async (totay, total) => {
   );
 };
 
-export const visitedCtrl = {
+const visitedCtrl = {
   getVisited: async (req, res) => {
     connection.query("select * from visited_table", (error, rows) => {
       if (error) throw error;
@@ -43,4 +43,4 @@ export const visitedCtrl = {
   },
 };
 
-export default visitedCtrl;
+module.exports = visitedCtrl;

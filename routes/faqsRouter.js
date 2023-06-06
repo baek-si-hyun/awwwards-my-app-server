@@ -1,9 +1,9 @@
-import express from 'express';
-import faqsCtrl from '../controllers/faqsCtrl.js'
+const express = require('express');
+const faqsCtrl = require('../controllers/faqsCtrl.js');
 
 const router = express.Router();
 
 router.route('/')
-    .get(faqsCtrl.getFaqs)
+    .get(faqsCtrl.getFaqs);
 
-export default router
+module.exports = router;

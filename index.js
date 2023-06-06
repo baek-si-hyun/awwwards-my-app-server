@@ -1,8 +1,5 @@
-import express from 'express';
-import cors from 'cors';
-import faqsRouter from './routes/faqsRouter.js';
-import projectsRouter from './routes/projectsRouter.js';
-import visitedRouter from './routes/visitedRouter.js';
+const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
@@ -15,6 +12,6 @@ app.listen(port, () => {
   console.log("server listening on port", port);
 });
 
-app.use('/api/visited', visitedRouter);
-app.use('/api/faqs', faqsRouter);
-app.use('/api/projects', projectsRouter);
+app.use('/api/visited', require('./routes/visitedRouter.js'));
+app.use('/api/faqs',  require('./routes/faqsRouter.js'));
+app.use('/api/projects', require('./routes/projectsRouter.js'));
