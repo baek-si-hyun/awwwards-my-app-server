@@ -3,3 +3,4 @@
 # dependencies
 node_modules
 /database.json
+sql_query.sql
