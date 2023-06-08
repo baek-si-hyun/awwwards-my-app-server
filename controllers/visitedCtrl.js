@@ -21,6 +21,9 @@ const visitedCtrl = {
     const receivedData = req.body;
 
     switch (receivedData.pathname) {
+      case "/Awwwards":
+        await updateDB("visited_awwwards_today", "visited_awwwards_total");
+        break;
       case "/Netflix":
         await updateDB("visited_netflix_today", "visited_netflix_total");
         break;
