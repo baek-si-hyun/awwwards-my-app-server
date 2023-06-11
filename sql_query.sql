@@ -82,6 +82,8 @@ do
  
 show events;
 
+select now()
+
 select * from visited_table;
 
 drop event if exists reset_visited_table_today_columns;
